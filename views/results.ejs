@@ -1,0 +1,142 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>FilMovie Search</title>
+    <link rel="icon" style="background-color: black;"
+        href="https://toppng.com/uploads/preview/movie-film-strip-icon-film-icon-colored-11553389191qan65kbwza.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/style1.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#new").tooltip({
+                show: {
+                    effect: "slideDown",
+                    delay: 250
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" id="new" title="FilMovie API" href="/">
+            <i class="fa fa-film" aria-hidden="true"></i>
+            FilMovie API
+
+        </a>
+        <a class="navbar-item" style="color: white;text-decoration: none;" href="/">
+            Search Again
+        </a>
+    </nav>
+    <h1 class="text-center display-3">
+        Movie Info
+    </h1>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src='<%= data["Poster"] %>' alt="pic">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h2 class="text-center">
+                    <%= data["Title"] %>
+                </h2>
+                <ul>
+                    <li>
+                        <strong>
+                            Genre :
+                        </strong>
+                        <%= data["Genre"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            Released :
+                        </strong>
+                        <%= data["Released"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            Runtime :
+                        </strong>
+                        <%= data["Runtime"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            Rated :
+                        </strong>
+                        <%= data["Rated"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            IMDB Ratings :
+                        </strong>
+                        <%= data["imdbRating"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            Director :
+                        </strong>
+                        <%= data["Director"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            Writer :
+                        </strong>
+                        <%= data["Writer"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            Actors :
+                        </strong>
+                        <%= data["Actors"] %>
+                    </li>
+                    <li>
+                        <strong>
+                            Production :
+                        </strong>
+                        <%= data["Production"] %>
+                    </li>
+                </ul>
+                <a href="/" style="margin: 0 auto;" class="btn btn-primary  btn-block">Search Again!</a>
+            </div>
+        </div>
+        <br>
+        <hr class="style-seven">
+        <section class="plot">
+            <h2 class="head">PLOT</h2>
+            <%= data["Plot"] %>
+                <br>
+                <br>
+        </section>
+    </div>
+    <br>
+    <h5 class="copy">CREATED BY @ARYAN GARG &copy; 2020</h5><br>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
